@@ -13,13 +13,46 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Deploy to Netlify
-        uses: South-Paw/action-netlify-deploy@v1.2.0
+        uses: nwtgck/actions-netlify@v3.0
         with:
+          publish-dir: '.'
+          production-branch: production
           github-token: ${{ secrets.TOKEN_GITHUB }}
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-          build-dir: '.'
-          comment-on-commit: true
+          deploy-message: "Deployed from GitHub Actions: ${{ github.event_name }} (${{ github.sha }})"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+
+
+
+
+
+
+# name: Deploy to Netlify
+
+# on:
+#   push:
+#     branches: [production, staging, test]
+#   pull_request:
+#     branches: [production, staging, test]
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+
+#       - name: Deploy to Netlify
+#         uses: South-Paw/action-netlify-deploy@v1.2.0
+#         with:
+#           github-token: ${{ secrets.TOKEN_GITHUB }}
+#           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#           netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+#           build-dir: '.'
+#           comment-on-commit: true
 
 
 
