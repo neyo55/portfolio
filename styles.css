@@ -73,6 +73,7 @@ nav {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    margin-right: 10px; /* Add margin to avoid overlap with theme toggle */
 }
 
 .hamburger span {
@@ -148,6 +149,16 @@ body.light-mode .skill {
 
 body.light-mode .skill:hover {
     background: linear-gradient(135deg, #81c3f7, #4a90e2);
+}
+
+/* Ensure About section links are readable in light mode */
+body.light-mode #about a {
+    color: #ff6b6b; /* Red color for better contrast */
+    text-decoration: underline;
+}
+
+body.light-mode #about a:hover {
+    color: #e55a5a;
 }
 
 /* Hero Section */
@@ -503,10 +514,17 @@ footer {
 
     .nav-links li {
         margin: 0.5rem 0;
+        margin-left: 20px; /* Add margin to shift links away from the extreme left */
     }
 
     .hamburger {
         display: flex;
+    }
+
+    /* Adjust theme toggle position on mobile to avoid overlap */
+    .theme-toggle {
+        top: 20px;
+        right: 50px; /* Move left to avoid overlap with hamburger */
     }
 
     .hero-content h1 {
@@ -571,5 +589,10 @@ footer {
     .contact-links .phone-numbers {
         flex-direction: column;
         gap: 0.2rem;
+    }
+
+    /* Further adjust theme toggle on smaller screens */
+    .theme-toggle {
+        right: 45px; /* Adjust for very small screens */
     }
 }
