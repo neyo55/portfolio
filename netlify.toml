@@ -1,0 +1,3 @@
+[build]
+  command = ""  # No build command needed since your portfolio is static HTML/CSS/JS
+  publish = "/"  # The root directory contains your index.html
