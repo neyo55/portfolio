@@ -73,7 +73,7 @@ nav {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Add margin to avoid overlap with theme toggle */
+    margin-right: 40px; /* Increased margin to create more space for theme toggle */
 }
 
 .hamburger span {
@@ -151,14 +151,14 @@ body.light-mode .skill:hover {
     background: linear-gradient(135deg, #81c3f7, #4a90e2);
 }
 
-/* Ensure About section links are readable in light mode */
-body.light-mode #about a {
-    color: #ff6b6b; /* Red color for better contrast */
+/* Ensure About section links are readable in light mode with higher specificity */
+body.light-mode #about p a {
+    color: #ff6b6b !important; /* Red color for better contrast, !important to override other styles */
     text-decoration: underline;
 }
 
-body.light-mode #about a:hover {
-    color: #e55a5a;
+body.light-mode #about p a:hover {
+    color: #e55a5a !important;
 }
 
 /* Hero Section */
@@ -524,7 +524,7 @@ footer {
     /* Adjust theme toggle position on mobile to avoid overlap */
     .theme-toggle {
         top: 20px;
-        right: 50px; /* Move left to avoid overlap with hamburger */
+        right: 70px; /* Increased to avoid overlap with hamburger */
     }
 
     .hero-content h1 {
@@ -593,6 +593,6 @@ footer {
 
     /* Further adjust theme toggle on smaller screens */
     .theme-toggle {
-        right: 45px; /* Adjust for very small screens */
+        right: 65px; /* Adjusted for smaller screens */
     }
 }
