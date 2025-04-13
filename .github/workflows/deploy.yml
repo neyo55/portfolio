@@ -1,15 +1,17 @@
 name: Deploy to Netlify
+
 on:
   push:
-    branches: [main]
+    branches: [production, staging, test]
   pull_request:
-    branches: [main]
+    branches: [production, staging, test]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Deploy to Netlify
         uses: South-Paw/action-netlify-deploy@v1.2.0
         with:
@@ -24,54 +26,3 @@ jobs:
 
 
 
-# name: Deploy to Netlify
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       # Checkout the repository
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-
-#       # Deploy to Netlify
-#       - name: Deploy to Netlify
-#         uses: nwtgck/actions-netlify@v2.0
-#         with:
-#           publish-dir: '.'
-#           production-branch: main
-#           netlify-site-id: 'a5d20a6d-5358-46a1-95f7-97a3c0d5a859'  # Replace with your Netlify Site ID
-#         env:
-#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-
-
-
-
-
-
-# name: Deploy to Netlify
-# on:
-#   push:
-#     branches: [main]
-#   pull_request:
-#     branches: [main]
-
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - name: Deploy to Netlify
-#         uses: South-Paw/action-netlify-deploy@v1.2.0
-#         with:
-#           github-token: ${{ secrets.TOKEN_GITHUB }}
-#           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-#           netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-#           build-dir: '.'
-#           comment-on-commit: true
