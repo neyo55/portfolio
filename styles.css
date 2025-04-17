@@ -203,42 +203,28 @@ body.light-mode .tech-icon {
     filter: brightness(0.8) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
 }
 
-/* Define positions for all 11 tech icons to avoid overlap */
-.tech-icon:nth-child(1) { top: 10%; left: 5%; }
-.tech-icon:nth-child(2) { top: 15%; right: 10%; }
-.tech-icon:nth-child(3) { bottom: 20%; left: 15%; }
-.tech-icon:nth-child(4) { top: 25%; left: 25%; }
-.tech-icon:nth-child(5) { bottom: 30%; right: 20%; }
-.tech-icon:nth-child(6) { top: 35%; left: 35%; }
-.tech-icon:nth-child(7) { top: 40%; right: 30%; }
+/* Define positions for all 15 tech icons to avoid overlap */
+.tech-icon:nth-child(1) { top: 5%; left: 5%; }
+.tech-icon:nth-child(2) { top: 10%; right: 5%; }
+.tech-icon:nth-child(3) { bottom: 10%; left: 10%; }
+.tech-icon:nth-child(4) { top: 20%; left: 20%; }
+.tech-icon:nth-child(5) { bottom: 20%; right: 15%; }
+.tech-icon:nth-child(6) { top: 30%; left: 30%; }
+.tech-icon:nth-child(7) { top: 35%; right: 25%; }
 .tech-icon:nth-child(8) { bottom: 15%; left: 40%; }
-.tech-icon:nth-child(9) { top: 50%; left: 10%; }
-.tech-icon:nth-child(10) { bottom: 10%; right: 15%; }
-.tech-icon:nth-child(11) { top: 60%; left: 50%; }
+.tech-icon:nth-child(9) { top: 45%; left: 15%; }
+.tech-icon:nth-child(10) { bottom: 5%; right: 10%; }
+.tech-icon:nth-child(11) { top: 50%; left: 50%; }
+.tech-icon:nth-child(12) { top: 15%; right: 35%; }
+.tech-icon:nth-child(13) { bottom: 25%; left: 25%; }
+.tech-icon:nth-child(14) { top: 60%; left: 35%; }
+.tech-icon:nth-child(15) { bottom: 30%; right: 30%; }
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
     .tech-icon {
         width: 40px;
         height: 40px;
-    }
-    .tech-icon:nth-child(1) { top: 5%; left: 5%; }
-    .tech-icon:nth-child(2) { top: 10%; right: 5%; }
-    .tech-icon:nth-child(3) { bottom: 15%; left: 10%; }
-    .tech-icon:nth-child(4) { top: 20%; left: 20%; }
-    .tech-icon:nth-child(5) { bottom: 25%; right: 10%; }
-    .tech-icon:nth-child(6) { top: 30%; left: 30%; }
-    .tech-icon:nth-child(7) { top: 35%; right: 20%; }
-    .tech-icon:nth-child(8) { bottom: 10%; left: 35%; }
-    .tech-icon:nth-child(9) { top: 40%; left: 15%; }
-    .tech-icon:nth-child(10) { bottom: 5%; right: 10%; }
-    .tech-icon:nth-child(11) { top: 45%; left: 40%; }
-}
-
-@media (max-width: 480px) {
-    .tech-icon {
-        width: 30px;
-        height: 30px;
     }
     .tech-icon:nth-child(1) { top: 5%; left: 5%; }
     .tech-icon:nth-child(2) { top: 10%; right: 5%; }
@@ -251,6 +237,32 @@ body.light-mode .tech-icon {
     .tech-icon:nth-child(9) { top: 35%; left: 15%; }
     .tech-icon:nth-child(10) { bottom: 5%; right: 10%; }
     .tech-icon:nth-child(11) { top: 40%; left: 40%; }
+    .tech-icon:nth-child(12) { top: 10%; right: 25%; }
+    .tech-icon:nth-child(13) { bottom: 25%; left: 20%; }
+    .tech-icon:nth-child(14) { top: 50%; left: 30%; }
+    .tech-icon:nth-child(15) { bottom: 30%; right: 20%; }
+}
+
+@media (max-width: 480px) {
+    .tech-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .tech-icon:nth-child(1) { top: 5%; left: 5%; }
+    .tech-icon:nth-child(2) { top: 10%; right: 5%; }
+    .tech-icon:nth-child(3) { bottom: 15%; left: 10%; }
+    .tech-icon:nth-child(4) { top: 15%; left: 15%; }
+    .tech-icon:nth-child(5) { bottom: 20%; right: 10%; }
+    .tech-icon:nth-child(6) { top: 20%; left: 25%; }
+    .tech-icon:nth-child(7) { top: 25%; right: 15%; }
+    .tech-icon:nth-child(8) { bottom: 10%; left: 30%; }
+    .tech-icon:nth-child(9) { top: 30%; left: 10%; }
+    .tech-icon:nth-child(10) { bottom: 5%; right: 5%; }
+    .tech-icon:nth-child(11) { top: 35%; left: 35%; }
+    .tech-icon:nth-child(12) { top: 10%; right: 20%; }
+    .tech-icon:nth-child(13) { bottom: 25%; left: 15%; }
+    .tech-icon:nth-child(14) { top: 40%; left: 25%; }
+    .tech-icon:nth-child(15) { bottom: 30%; right: 15%; }
 }
 
 /* Hero Content */
@@ -379,7 +391,7 @@ section h2 {
 
 .skill {
     background: linear-gradient(135deg, #00b4d8, #48dbfb);
-    padding: 1.2rem;
+    padding: 1rem 0.5rem; /* Reduced padding to fit longer text */
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     font-weight: 600;
@@ -387,6 +399,12 @@ section h2 {
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     width: 150px;
     text-align: center;
+    font-size: 0.9rem; /* Slightly smaller font size for better fit */
+    line-height: 1.2; /* Adjusted line height for multi-line text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px; /* Ensures consistent height for animation */
 }
 
 .skill:hover {

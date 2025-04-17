@@ -72,7 +72,16 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Email reveal functionality with CAPTCHA
+// Email reveal functionality with random CAPTCHA
+// Generate random numbers between 1 and 10 for the math question
+const num1 = Math.floor(Math.random() * 10) + 1;
+const num2 = Math.floor(Math.random() * 10) + 1;
+const correctAnswer = num1 + num2;
+
+// Update the label with the random question
+const captchaLabel = document.querySelector('#email-security-check label');
+captchaLabel.textContent = `What is ${num1} + ${num2}? (Security Check)`;
+
 document.getElementById('reveal-email').addEventListener('click', function(event) {
     event.preventDefault();
     const answer = document.getElementById('captcha-answer').value;
@@ -80,7 +89,7 @@ document.getElementById('reveal-email').addEventListener('click', function(event
     const emailPlaceholder = document.getElementById('email-placeholder');
     const securityCheck = document.getElementById('email-security-check');
 
-    if (parseInt(answer) === 5) { // 2 + 3 = 5
+    if (parseInt(answer) === correctAnswer) {
         emailPlaceholder.innerHTML = '<a href="mailto:rufai_adeniyi@yahoo.co.uk">rufai_adeniyi@yahoo.co.uk</a>';
         securityCheck.style.display = 'none'; // Hide the security check form
         errorMessage.style.display = 'none';
