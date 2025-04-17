@@ -203,11 +203,55 @@ body.light-mode .tech-icon {
     filter: brightness(0.8) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
 }
 
-.tech-icon:nth-child(1) { top: 15%; left: 10%; }
-.tech-icon:nth-child(2) { top: 25%; right: 15%; }
-.tech-icon:nth-child(3) { bottom: 20%; left: 20%; }
-.tech-icon:nth-child(4) { top: 50%; right: 10%; }
-.tech-icon:nth-child(5) { bottom: 15%; left: 50%; }
+/* Define positions for all 11 tech icons to avoid overlap */
+.tech-icon:nth-child(1) { top: 10%; left: 5%; }
+.tech-icon:nth-child(2) { top: 15%; right: 10%; }
+.tech-icon:nth-child(3) { bottom: 20%; left: 15%; }
+.tech-icon:nth-child(4) { top: 25%; left: 25%; }
+.tech-icon:nth-child(5) { bottom: 30%; right: 20%; }
+.tech-icon:nth-child(6) { top: 35%; left: 35%; }
+.tech-icon:nth-child(7) { top: 40%; right: 30%; }
+.tech-icon:nth-child(8) { bottom: 15%; left: 40%; }
+.tech-icon:nth-child(9) { top: 50%; left: 10%; }
+.tech-icon:nth-child(10) { bottom: 10%; right: 15%; }
+.tech-icon:nth-child(11) { top: 60%; left: 50%; }
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .tech-icon:nth-child(1) { top: 5%; left: 5%; }
+    .tech-icon:nth-child(2) { top: 10%; right: 5%; }
+    .tech-icon:nth-child(3) { bottom: 15%; left: 10%; }
+    .tech-icon:nth-child(4) { top: 20%; left: 20%; }
+    .tech-icon:nth-child(5) { bottom: 25%; right: 10%; }
+    .tech-icon:nth-child(6) { top: 30%; left: 30%; }
+    .tech-icon:nth-child(7) { top: 35%; right: 20%; }
+    .tech-icon:nth-child(8) { bottom: 10%; left: 35%; }
+    .tech-icon:nth-child(9) { top: 40%; left: 15%; }
+    .tech-icon:nth-child(10) { bottom: 5%; right: 10%; }
+    .tech-icon:nth-child(11) { top: 45%; left: 40%; }
+}
+
+@media (max-width: 480px) {
+    .tech-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .tech-icon:nth-child(1) { top: 5%; left: 5%; }
+    .tech-icon:nth-child(2) { top: 10%; right: 5%; }
+    .tech-icon:nth-child(3) { bottom: 15%; left: 10%; }
+    .tech-icon:nth-child(4) { top: 15%; left: 20%; }
+    .tech-icon:nth-child(5) { bottom: 20%; right: 10%; }
+    .tech-icon:nth-child(6) { top: 25%; left: 30%; }
+    .tech-icon:nth-child(7) { top: 30%; right: 15%; }
+    .tech-icon:nth-child(8) { bottom: 10%; left: 35%; }
+    .tech-icon:nth-child(9) { top: 35%; left: 15%; }
+    .tech-icon:nth-child(10) { bottom: 5%; right: 10%; }
+    .tech-icon:nth-child(11) { top: 40%; left: 40%; }
+}
 
 /* Hero Content */
 .hero-content {

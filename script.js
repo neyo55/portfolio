@@ -72,9 +72,20 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Email reveal functionality
-document.getElementById('reveal-email').addEventListener('click', function() {
+// Email reveal functionality with CAPTCHA
+document.getElementById('reveal-email').addEventListener('click', function(event) {
+    event.preventDefault();
+    const answer = document.getElementById('captcha-answer').value;
+    const errorMessage = document.getElementById('captcha-error');
     const emailPlaceholder = document.getElementById('email-placeholder');
-    emailPlaceholder.innerHTML = '<a href="mailto:rufai_adeniyi@yahoo.co.uk">rufai_adeniyi@yahoo.co.uk</a>';
-    this.style.display = 'none'; // Hide the button after revealing the email
+    const securityCheck = document.getElementById('email-security-check');
+
+    if (parseInt(answer) === 5) { // 2 + 3 = 5
+        emailPlaceholder.innerHTML = '<a href="mailto:rufai_adeniyi@yahoo.co.uk">rufai_adeniyi@yahoo.co.uk</a>';
+        securityCheck.style.display = 'none'; // Hide the security check form
+        errorMessage.style.display = 'none';
+    } else {
+        errorMessage.style.display = 'block';
+        document.getElementById('captcha-answer').value = ''; // Clear the input
+    }
 });

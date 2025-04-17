@@ -49,7 +49,8 @@
     <!-- Hero Section -->
     <section id="hero" data-aos="fade-up">
         <div class="tech-overlay">
-            <img src="https://cdn.simpleicons.org/aws/FF9900" alt="AWS Icon" class="tech-icon">
+            <!-- <img src="aws-icon.svg" alt="AWS Icon" class="tech-icon"> -->
+            <img src="https://cdn.simpleicons.org/linux/232F3E" alt="AWS Icon" class="tech-icon">
             <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker Icon" class="tech-icon">
             <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes Icon" class="tech-icon">
             <img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform Icon" class="tech-icon">
@@ -161,6 +162,7 @@
         <h2>Experience</h2>
         <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
             <h3>Tech Support Executive, Finchglow Holdings</h3>
+            <h5>Travel services and Technology Services</h5>
             <p>01/2025 – Present | Lagos, Nigeria</p>
             <ul>
                 <li>Automated monitoring with CloudWatch & Mailutils, achieving 99.9% uptime.</li>
@@ -170,6 +172,7 @@
         </div>
         <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
             <h3>IT Executive, African Exhibition Services</h3>
+            <h5>Exhibition booth constructions and tent structures</h5>
             <p>04/2019 – 12/2024 | Lagos, Nigeria</p>
             <ul>
                 <li>Revamped network infrastructure with MikroTik routers, reducing downtime by 95%.</li>
@@ -180,6 +183,7 @@
         </div>
         <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
             <h3>IT Technician, Bet Bonanza</h3>
+            <h5>A gaming and betting company</h5>
             <p>12/2018 – 03/2019 | Lagos, Nigeria</p>
             <ul>
                 <li>Deployed and maintained infrastructure for 18 gaming centers, reducing support issues by 30%.</li>
@@ -188,6 +192,7 @@
         </div>
         <div class="experience-item" data-aos="fade-up" data-aos-delay="400">
             <h3>IT Executive, Newgate Medical Services Ltd</h3>
+            <h5>Healthcare services provider</h5>
             <p>04/2017 – 11/2018 | Lagos, Nigeria</p>
             <ul>
                 <li>Upgraded network capacity, improving access for 35+ users by 40%.</li>
@@ -206,7 +211,7 @@
             <p>Specialized in automation, infrastructure as code, and cloud infrastructure management.</p>
         </div>
         <div class="education-item" data-aos="fade-up" data-aos-delay="200">
-            <h3>OND in Computer Engineering</h3>
+            <h3>ND in Computer Engineering</h3>
             <p>Lagos State Polytechnic | 07/2013 – 09/2016</p>
         </div>
         <div class="education-item" data-aos="fade-up" data-aos-delay="300">
@@ -243,7 +248,13 @@
             <p id="form-message" style="display: none; margin-top: 1rem;"></p>
         </form>
         <div class="contact-links">
-            <p>Email: <span id="email-placeholder">[Click to reveal email]</span> <button id="reveal-email" class="btn btn-secondary">Reveal Email</button></p>
+            <p>Email: <span id="email-placeholder"></span></p>
+            <div id="email-security-check">
+                <label for="captcha-answer">What is 2 + 3? (Security Check)</label>
+                <input type="number" id="captcha-answer" required>
+                <button id="reveal-email" class="btn btn-secondary">Reveal Email</button>
+                <p id="captcha-error" style="color: red; display: none;">Incorrect answer. Please try again.</p>
+            </div>
             <p>Phone: +2348028082472, +2348064458818</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/rufai-adeniyi" target="_blank">linkedin.com/in/rufai-adeniyi</a></p>
             <p>GitHub: <a href="https://github.com/neyo55" target="_blank">github.com/neyo55</a></p>
