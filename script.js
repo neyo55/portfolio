@@ -71,3 +71,10 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark-mode');
     }
 });
+
+// Email reveal functionality
+document.getElementById('reveal-email').addEventListener('click', function() {
+    const emailPlaceholder = document.getElementById('email-placeholder');
+    emailPlaceholder.innerHTML = '<a href="mailto:rufai_adeniyi@yahoo.co.uk">rufai_adeniyi@yahoo.co.uk</a>';
+    this.style.display = 'none'; // Hide the button after revealing the email
+});
